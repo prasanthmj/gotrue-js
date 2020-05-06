@@ -6,6 +6,7 @@ declare class Admin {
     getUser(user: UserData): Promise<UserData>;
     listUsers(aud: string): Promise<UserData[]>;
     updateUser(user: UserData, attributes?: any): Promise<void>;
+    
 }
 
 export interface GoTrueInit {
@@ -81,6 +82,8 @@ export declare class User implements UserData {
     logout(): Promise<void>;
     tokenDetails(): Token;
     update(attributes: any): Promise<User>;
+    
+    _request(path: string, params ?: any) : Promise<UserData>;
 }
 
 export interface UserData {
