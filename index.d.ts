@@ -83,7 +83,7 @@ export declare class User implements UserData {
     tokenDetails(): Token;
     update(attributes: any): Promise<User>;
     
-    _request(path: string, params ?: any) : Promise<UserData>;
+    _request(path: string, params ?: any) : Promise<any>;
 }
 
 export interface UserData {
